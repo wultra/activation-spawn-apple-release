@@ -4,5 +4,5 @@ This library provides features that can install another application and activate
 
 ## Read Next
 
-- [Introducing the Activation Spawn (blog post)](https://developers.wultra.com/blog/posts/Introducing-Activation-Spawn/)
-- [Installation](docs/Installation.md)
+- [Introduction (blog post)](https://developers.wultra.com/blog/posts/Introducing-Activation-Spawn/)
+- [Installation](Installation.md)

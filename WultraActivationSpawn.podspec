@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.cocoapods_version   = '>= 1.10'
   s.name                = "WultraActivationSpawn"
-  s.version             = "0.0.2"
+  s.version             = "0.0.3"
   s.summary             = "PowerAuth Activation Spawn by Wultra"
   s.homepage            = "https://www.powerauth.com/"
   s.social_media_url    = 'https://twitter.com/wultra'
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   LICENSE
   }
   s.prepare_command = <<-CMD
-      ./prepare.sh 0.0.2 13e21de32f64d833e1447699f0343a78f89256df6cdc784f8c833203b9162412
+      ./prepare.sh 0.0.3 bf58c772a19110b597270c7ac7e6614d865035cf5358e3c5adab224d59c2daae
   CMD
   s.vendored_frameworks = "WultraActivationSpawn.xcframework"
   

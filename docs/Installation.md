@@ -30,7 +30,7 @@ The library is distributed via Cocoapods private repository. If you're not using
    target 'MyProject' do
        use_frameworks!
        pod 'WultraActivationSpawn', :git => 'https://github.com/wultra/activation-spawn-apple-release.git', :tag => '1.2.0'
-       pod 'WultraDeviceFingerprint', :git => 'https://github.com/wultra/device-fingerprint-apple-release.git', :tag => '1.3.0'
+       pod 'WultraDeviceFingerprint', :git => 'https://github.com/wultra/device-fingerprint-apple-release.git', :tag => '1.3.1'
    end
    ```
    You can check the latest versions of libraries above at release pages:
@@ -52,10 +52,9 @@ The library is distributed also as a package for Swift Package Manager:
 
 2. Add the following repositories as a dependency into your project:
    ```
-   https://github.com/wultra/activation-spawn-apple-release
+   https://github.com/wultra/activation-spawn-apple-release (add both WultraActivationSpawn and WultraPowerAuthNetworking lib)
    https://github.com/wultra/device-fingerprint-apple-release
-   https://github.com/wultra/networking-apple
-   https://github.com/wultra/powerauth-mobile-sdk-spm (add both PowerAuth2 and PowerAuthCore)
+   https://github.com/wultra/powerauth-mobile-sdk-spm (add both PowerAuth2 and PowerAuthCore lib)
    ```
    You can use Xcode's dedicated user interface to do this or add the dependency manually, for example:
    ```swift
@@ -72,8 +71,7 @@ The library is distributed also as a package for Swift Package Manager:
        ],
        dependencies: [
            .package(name: "WultraActivationSpawn", url: "https://github.com/wultra/activation-spawn-apple-release.git", .upToNextMinor(from: "1.2.0")),
-           .package(name: "WultraDeviceFingerprint", url: "https://github.com/wultra/device-fingerprint-apple-release.git", .upToNextMinor(from: "1.3.0")),
-           .package(name: "WultraPowerAuthNetworking", url: "https://github.com/wultra/networking-apple.git", .upToNextMinor(from: "1.1.1")),
+           .package(name: "WultraDeviceFingerprint", url: "https://github.com/wultra/device-fingerprint-apple-release.git", .upToNextMinor(from: "1.3.1")),
            .package(name: "PowerAuth2", url: "https://github.com/wultra/powerauth-mobile-sdk-spm.git", .upToNextMinor(from: "1.6.2")),
        ],
        targets: [
@@ -81,7 +79,7 @@ The library is distributed also as a package for Swift Package Manager:
                name: "YourLibrary",
                dependencies: [
                    "WultraDeviceFingerprint",
-                   "WultraPowerAuthNetworking",
+                   .product(name: "WultraPowerAuthNetworking", package: "WultraActivationSpawn"),
                    "PowerAuth2",
                    .product(name: "PowerAuthCore", package: "PowerAuth2")
                ])

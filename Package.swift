@@ -13,11 +13,11 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "WultraActivationSpawn",
-            url: "https://wultra.jfrog.io/artifactory/activation-spawn-apple-release/WultraActivationSpawn-1.2.0.xcframework.zip",
-            checksum: "800e61714cdb1fe9dec3fd78ad4d7fa39442a76479cc3e42b6cb950fba64d3b5"),
+            url: "https://wultra.jfrog.io/artifactory/activation-spawn-apple-release/WultraActivationSpawn-1.2.1.xcframework.zip",
+            checksum: "df0af7d7c1b9f626250b45c30eb7ac8aaaba1987b5b1e9514ddcca9cc4fbf006"),
         .binaryTarget(
             name: "WultraPowerAuthNetworking",
-            url: "https://wultra.jfrog.io/artifactory/activation-spawn-apple-release/WultraPowerAuthNetworking-1.2.0.xcframework.zip",
-            checksum: "7652d6e749cd7390413a6a9ba216e22f63fefbf323eea7956229e559665e3c25")
+            url: "https://wultra.jfrog.io/artifactory/activation-spawn-apple-release/WultraPowerAuthNetworking-1.2.1.xcframework.zip",
+            checksum: "99497b1f3e360d227773d7feafb15da15eef98d54faa7eb4908fe7ad5e805e26")
     ]
 )

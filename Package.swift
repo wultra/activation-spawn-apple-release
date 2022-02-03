@@ -16,8 +16,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "WultraActivationSpawn",
-            url: "https://wultra.jfrog.io/artifactory/activation-spawn-apple-release/WultraActivationSpawn-1.2.2.xcframework.zip",
-            checksum: "05f384716ff2fee99335c384635596ad75d6ff0f0968a4b82d83022cc8e0dae2"
+            url: "https://wultra.jfrog.io/artifactory/activation-spawn-apple-release/WultraActivationSpawn-1.2.3.xcframework.zip",
+            checksum: "88d7c428ab1cf4df0712812207debd1b56f1912f65e3f4577d4ffc682e9b41f3"
         )
     ]
 )

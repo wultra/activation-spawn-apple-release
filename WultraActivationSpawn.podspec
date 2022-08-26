@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.cocoapods_version   = '>= 1.10'
   s.name                = "WultraActivationSpawn"
-  s.version             = "1.2.4"
+  s.version             = "1.2.5"
   s.summary             = "PowerAuth Activation Spawn by Wultra"
   s.homepage            = "https://www.powerauth.com/"
   s.social_media_url    = 'https://twitter.com/wultra'
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   LICENSE
   }
   s.prepare_command = <<-CMD
-      ./prepare.sh 1.2.4 32e501f1dd83cddead8a4e4c13105f45b5928410578494e86a2948586469c919
+      ./prepare.sh 1.2.5 4a8fd09753d23c391c83757684d9581bbb411331f5a050a9accb22ca89920d49
   CMD
   s.vendored_frameworks = "WultraActivationSpawn.xcframework"
   
@@ -27,7 +27,6 @@ Pod::Spec.new do |s|
   s.swift_version       = "5.0"
   s.ios.deployment_target  = '10.0'
 
-  s.dependency 'PowerAuth2', '~> 1.6'
-  s.dependency 'WultraDeviceFingerprint', '~> 1.3.0'
-  s.dependency 'WultraPowerAuthNetworking', '~> 1.1.0'
+  s.dependency 'WultraDeviceFingerprint', '~> 1.3.2'
+  s.dependency 'WultraPowerAuthNetworking', '~> 1.1.4'
 end

@@ -10,7 +10,7 @@
 
 The library is supported on the following operating systems:
 
-- **iOS** 10.0+
+- **iOS** 11.0+
 
 ## Swift Package Manager
 
@@ -32,7 +32,7 @@ The library is distributed also as a package for Swift Package Manager:
    You can use Xcode's dedicated user interface to do this or add the dependency manually, for example:
    
    ```swift
-   // swift-tools-version:5.4
+   // swift-tools-version:5.7
 
    import PackageDescription
 

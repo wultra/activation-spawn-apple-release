@@ -1,10 +1,10 @@
-// swift-tools-version:5.7
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
     name: "WultraActivationSpawn",
     platforms: [
-        .iOS(.v11)
+        .iOS(.v12)
     ],
     products: [
         .library(name: "WultraActivationSpawn", targets: ["WultraActivationSpawn"])
@@ -17,8 +17,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "WultraActivationSpawn",
-            url: "https://wultra.jfrog.io/artifactory/activation-spawn-apple-release/WultraActivationSpawn-1.3.0.xcframework.zip",
-            checksum: "76fcd5112415aad1dfd3a4b17a3d100ac09cf411ec897b9352c3ca15e8b5b200"
+            url: "https://wultra.jfrog.io/artifactory/activation-spawn-apple-release/WultraActivationSpawn-1.3.1.xcframework.zip",
+            checksum: "167cca51f355a25e96bcf2c02902a8f4151956eedd76695b31e818b62dd188a0"
         )
     ]
 )

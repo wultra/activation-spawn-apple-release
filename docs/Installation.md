@@ -10,7 +10,7 @@
 
 The library is supported by the following operating systems:
 
-- **iOS** 11.0+
+- **iOS** 12.0+
 
 ## Swift Package Manager
 
@@ -23,11 +23,9 @@ The library is distributed as a package for Swift Package Manager:
          password [password]
    ```
 
-2. Add the following repositories as a dependency into your project:
+2. Add the following repository as a dependency into your project:
    ```
-   https://github.com/wultra/networking-apple.git
    https://github.com/wultra/activation-spawn-apple-release.git
-   https://github.com/wultra/device-fingerprint-apple-release.git
    ```
    You can use Xcode's dedicated user interface to do this or add the dependency manually, for example:
    
@@ -44,19 +42,13 @@ The library is distributed as a package for Swift Package Manager:
                targets: ["YourLibrary"]),
        ],
        dependencies: [
-           .package(url: "https://github.com/wultra/activation-spawn-apple-release.git", .upToNextMajor(from: "1.3.0")),
-           .package(url: "https://github.com/wultra/device-fingerprint-apple-release.git", .upToNextMajor(from: "1.3.0")),
-           .package(url: "https://github.com/wultra/networking-apple.git", .upToNextMajor(from: "1.1.0")),
-           .package(url: "https://github.com/wultra/powerauth-mobile-sdk-spm.git", .upToNextMajor(from: "1.7.0")),
+           .package(url: "https://github.com/wultra/activation-spawn-apple-release.git", .upToNextMajor(from: "2.0.0")),
        ],
        targets: [
            .target(
                name: "YourLibrary",
                dependencies: [
-                    .product(name: "WultraActivationSpawn", package: "activation-spawn-apple-release"),
-                    .product(name: "WultraDeviceFingerprint", package: "device-fingerprint-apple-release"),
-                    .product(name: "WultraPowerAuthNetworking", package: "networking-apple"),
-                    .product(name: "PowerAuth2", package: "powerauth-mobile-sdk-spm")
+                    .product(name: "WultraActivationSpawn", package: "activation-spawn-apple-release")
                 ]
             )
        ]
@@ -80,15 +72,13 @@ The library is also distributed through a public git repository, which contains 
    ```rb
    target 'MyProject' do
        use_frameworks!
-       pod 'WultraActivationSpawn', :git => 'https://github.com/wultra/activation-spawn-apple-release.git', :tag => '1.3.0'
-       pod 'WultraDeviceFingerprint', :git => 'https://github.com/wultra/device-fingerprint-apple-release.git', :tag => '1.3.2'
+       pod 'WultraActivationSpawn', :git => 'https://github.com/wultra/activation-spawn-apple-release.git', :tag => '2.0.0'
    end
    ```
    You can check the latest versions of the libraries above on the release pages:
    - [WultraActivationSpawn releases page](https://github.com/wultra/device-fingerprint-apple-release/releases)
-   - [WultraDeviceFingerprint releases page](https://github.com/wultra/activation-spawn-apple-release/releases)
 
-3. Run `pod install` in your project dictionary to make the `WultraActivationSpawn` and `WultraDeviceFingerprint` frameworks available in your project.
+3. Run `pod install` in your project dictionary to make the `WultraActivationSpawn` framework available in your project.
 
 ## Read next
 

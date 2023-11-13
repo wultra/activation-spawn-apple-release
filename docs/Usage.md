@@ -46,7 +46,6 @@
     ```swift
     import UIKit
     import WultraActivationSpawn
-    import WultraDeviceFingerprint
     import PowerAuth2
     
     class SampleViewController: UIViewController {
@@ -59,7 +58,7 @@
         var pa: PowerAuthSDK!
         
         // Additional data for generator (must be the same for both Source and Target App).
-        var additionalData: Data?
+        let additionalData: Data = "myAdditionalData".data(using: .utf8)!
         // Additional data for transporter (must be the same for both Source and Target App).
         var sharedInfo: Data?
         
@@ -77,21 +76,15 @@
                 )
                 activator = try WASActivator(powerAuth: pa, config: config)
                 
-                // Note that the generator configuration must be the same
+                // Note that the additionalData must be the same
                 // for both Target and Source App. Please consult with Wultra
-                // what configuration suits your needs.
-                let generator = try DeviceFingerprintGenerator
-                    .semiStable(
-                        forVendor: false,
-                        withAdditionalData: additionalData,
-                        validFor: 10
-                    )
-                transporter = WASTransporter(generator: generator)
+                // which configuration suits your needs.
+                transporter = try WASTransporter(config: .semiStable(sameTeam: true, validityInSeconds: 10), additionalData: additionalData)
                 
                 return true
                 
             } catch let e {
-                // failed to create activator or generator
+                // failed to create activator or transporter
                 return false
             }
         }
@@ -174,29 +167,21 @@
  ```swift
  import UIKit
  import WultraActivationSpawn
- import WultraDeviceFingerprint
  
  @UIApplicationMain
  class AppDelegate: UIResponder, UIApplicationDelegate {
  
-     // Additional data for generator (must be the same for both Source and Target App).
-     var additionalData: Data?
-     // Additional data for transporter (must be the same for both Source and Target App).
+     // Additional data for processor (must be the same for both Source and Target App).
+     let additionalData: Data = "myAdditionalData".data(using: .utf8)!
+     // Shared data for processor (must be the same for both Source and Target App).
      var sharedInfo: Data?
  
      func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
             
          do {
-             // Note that the generator configuration must be the same
-             // for both Target and Source App. Please consult with Wultra
-             // what configuration suits your needs.
-             let generator = try DeviceFingerprintGenerator
-                 .semiStable(
-                     forVendor: false,
-                     withAdditionalData: additionalData,
-                     validFor: 10
-                 )
-             transporter = WASTransporter(generator: generator)
+             // Note that the additionalData must be the same
+             // for both Target and Source App.
+             let processor = WASProcessor(additionalData: additionalData)
              
              // First, validate the deeplink if it's valid activation-spawn deelink
              // and retreive annotation data (when available)
@@ -246,9 +231,9 @@
  
  ```
  
-## Passing additional data
+## Passing custom data
 
-For your convenience, you can pass additional data from the _Source App_ to the _Target App_. There are 2 different types of custom string data that you can pass:
+For your convenience, you can pass custom data from the _Source App_ to the _Target App_. There are 2 different types of custom string data that you can pass:
 
 ### `annotation`
 
@@ -322,4 +307,4 @@ You can set the log level by `WASLogger.verboseLevel = .off`
 
 ## Read next
 
-- [DeviceFingerprintGenerator](./Generator.md)
+- [Transporter configuration](./TransporterConfig.md)

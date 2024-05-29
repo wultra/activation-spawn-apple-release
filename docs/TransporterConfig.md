@@ -28,3 +28,4 @@ Each configuration takes 2 parameters:
 ## Read next
 
 - [Tutorial: Introducing Activation Spawn](https://developers.wultra.com/tutorials/posts/Introducing-Activation-Spawn/)
+- [Do I Need PowerAuth?](./Do-I-Need-PowerAuth.md)

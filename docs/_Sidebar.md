@@ -1,8 +1,13 @@
 **Documentation**
 
 - [Installation](./Installation.md)
-- [Usage](./Usage.md)
-- [DeviceFingerprintGenerator](./Generator.md)
+- [Usage _(with PowerAuth)_](./Usage.md)
+- [Usage _(without PowerAuth)_](./Usage-Without-PowerAuth.md)
+- [TransporterConfig](./TransporterConfig.md)
+
+**Other**
+
+- [Do I Need PowerAuth?](./Do-I-Need-PowerAuth.md)
 
 **Migration Guides**
 

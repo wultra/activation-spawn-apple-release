@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.cocoapods_version   = '>= 1.10'
   s.name                = "WultraActivationSpawn"
-  s.version             = "3.0.0"
+  s.version             = "3.0.1"
   s.summary             = "PowerAuth Activation Spawn by Wultra"
   s.homepage            = "https://www.powerauth.com/"
   s.social_media_url    = 'https://twitter.com/wultra'
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.swift_version          = "5.9"
   s.ios.deployment_target  = '12.0'
   s.prepare_command = <<-CMD
-    ./prepare.sh 3.0.0 34bc6cc39c073ab0b03cad53762cda6c6e13ab6741e010fe5d87b89a6f495ece 6236f32f5462c97b2a66a59b5ba2c471b3658ce722d6b87b6ec30e20e15a6ea2
+    ./prepare.sh 3.0.1 d59ae0765a75719b1f2616206d087f428427d6c0b5f0b2e4c37143b2b3196193 e6196c14440fbc25e247725d4c0e8c5cfc5828421e35c5ee3a03ab5da7fc0b28
   CMD
 
   s.default_subspec = 'Full'

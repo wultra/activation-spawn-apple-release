@@ -16,3 +16,7 @@
 **Tutorial**
 
 - [Introducing Activation Spawn](https://developers.wultra.com/tutorials/posts/Introducing-Activation-Spawn/)
+
+**Other**
+
+- [Changelog](./Changelog.md)

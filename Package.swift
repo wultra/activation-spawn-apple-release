@@ -37,13 +37,13 @@ let package = Package(
         ),
         .binaryTarget(
             name: "WultraActivationSpawnBinary",
-            url: "https://wultra.jfrog.io/artifactory/activation-spawn-apple-release/WultraActivationSpawn-3.0.0.xcframework.zip",
-            checksum: "34bc6cc39c073ab0b03cad53762cda6c6e13ab6741e010fe5d87b89a6f495ece"
+            url: "https://wultra.jfrog.io/artifactory/activation-spawn-apple-release/WultraActivationSpawn-3.0.1.xcframework.zip",
+            checksum: "d59ae0765a75719b1f2616206d087f428427d6c0b5f0b2e4c37143b2b3196193"
         ),
         .binaryTarget(
             name: "WultraActivationSpawnBasicBinary",
-            url: "https://wultra.jfrog.io/artifactory/activation-spawn-apple-release/WultraActivationSpawnBasic-3.0.0.xcframework.zip",
-            checksum: "6236f32f5462c97b2a66a59b5ba2c471b3658ce722d6b87b6ec30e20e15a6ea2"
+            url: "https://wultra.jfrog.io/artifactory/activation-spawn-apple-release/WultraActivationSpawnBasic-3.0.1.xcframework.zip",
+            checksum: "e6196c14440fbc25e247725d4c0e8c5cfc5828421e35c5ee3a03ab5da7fc0b28"
         )
     ]
 )

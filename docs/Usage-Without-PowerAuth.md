@@ -220,17 +220,23 @@ All exceptions implement `CustomStringConvertible` protocol where details about 
 
 ### Logging
 
-The library is intensively logging into the console via `WASLogger`.
+You can set up logging for the library using the `WASLogger` class.
 
-Possible log levels:
+#### Verbosity Level
 
-- `.debug` - Debug logging that outputs more granular data, use this only during development
-- `.info` - prints info logs + logs for warning level produced by the library (__default level__)
-- `.warning` - prints warnings and errors
-- `.error` - prints errors only
-- `.off` - logging is turned off
+You can limit the amount of logged information via the `verboseLevel` property.
 
-You can set the log level by `WASLogger.verboseLevel = .off`
+| Level                  | Description                                       |
+| ---------------------- | ------------------------------------------------- |
+| `off`                  | Silences all messages.                            |
+| `errors`               | Only errors will be logged.                       |
+| `warnings` _(default)_ | Errors and warnings will be logged.               |
+| `info`                 | Error, warning and info messages will be logged.  |
+| `debug`                | All messages will be logged.                      |
+
+#### Logger Delegate
+
+In case you want to process logs on your own (for example log into a file or some cloud service), you can set `WASLogger.delegate`.
 
 ## Read next
 

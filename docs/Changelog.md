@@ -1,68 +1,79 @@
 # Changelog
 
-## 3.0.0 (June, 2024)
+## 3.1.0 (July, 2024)
 
-- It is now possible to use the library without `PowerAuth` dependency ([Usage _(without PowerAuth)_](./Usage-Without-PowerAuth.md)) .
-- Class `Processor.ValidationSuccess` in package `com.wultra.android.activationspawn` was moved outside of the `Processor` class and is now standalone in the same package.
+- Added log delegate - `WASLogger.delegate`
+- `networking-apple` v `1.4.x` is now required
 
-## 2.0.0 (May, 2024)
+## 3.0.1 (June, 2024)
 
-- Removed `ActivationSpawnManager` - use `Transporter`, `Processor`, and `Activator` classes instead.
-- Introduced generator configuration instead of using `DeviceFingerprintGenerator` directly. 
-- Follow [the migration guide](Migration1x2x.md) to understand all changes.
-- All changes are **backwards compatible**.
+- Added ability to process raw data after the transport
 
-## 1.5.1 (May, 2024)
+## 3.0.0 (May, 2024)
 
-- Added listener to the log class
+- It is now possible to use the library without `PowerAuth` dependency ([Usage _(without PowerAuth)_](./Usage-Without-PowerAuth.md))
 
-## 1.5.0 (Mar 4, 2024)
+## 2.1.0 (Nov 27, 2023)
 
-- `isInstalled` API no longer throws Exceptions
-- removed `QueryNotDeclaredException`
-- removed `APP_NOT_INSTALLED` and `DEEPLINK_CANNOT_BE_OPEN` reasons for `TransportDataException.Reason`
+- Bumped version of the fingerprint library
+ to `1.3.0`
 
-## 1.4.0 (Nov 27, 2023)
+## 2.0.1 (Nov 13, 2023)
 
-- Upgraded to powerauth-networking `1.3.0` (PowerAuth `1.8.x`)
+- Using the latest Xcode for the build
 
-## 1.3.0 (Nov 27, 2023)
+## 2.0.0 (Nov 13, 2023)
 
-- Annotation data
-- Improved documentation
-- Minor fixes and improvements
+- Configuration is now part of the transferred data
 
-## 1.2.1 (Apr 5, 2023)
+## 1.3.1 (Sep 20, 2023)
+
+- Documentation improvements on the integration with SPM
+- Update Cocoapods integration
+- Fix integration when using swift package 5.7+
+- Added annotation data and improved error handling
+- Upgraded to Xcode15, Swift 5.9 and iOS 12
+
+## 1.3.0 (Nov 14, 2022)
+
+- Introduced `WASTransportData`
+
+## 1.2.6 (Sep 22, 2022)
+
+- Supporting Xcode 14
+- Minimal support of iOS raised to 11
+
+## 1.2.5 (Aug 26, 2022)
 
 - Updated dependencies
+- Added option to create the service by injecting networking object directly
 
-## 1.2.0 (Nov 14, 2022)
+## 1.2.4 (Feb 5, 2022)
 
-- Introduced TransportData
+- Updated networking dependency
+- Fixed debugging symbols
 
-## 1.1.3 (Nov 12, 2021)
+## 1.2.3 (Feb 5, 2022)
 
-- Updated Android dependencies
+- Removed nested frameworks from the artifact
 
-## 1.1.2 (Nov 12, 2021)
+## 1.2.2 (Feb 2, 2022)
 
-- Using device-fingerprint `1.1.1`
+- PowerAuthNetworking dependency is no longer packed with the framework
 
-## 1.1.1 (Oct 25, 2021)
+## 1.2.1 (Feb 1, 2022)
 
-- Added activity flags option to openStore API
+- Using the latest Xcode for artifact build
+
+## 1.2.0 (Nov 15, 2021)
+
+- Swift Package Manager support
+
+## 1.1.1 (Oct 27, 2021)
+
+- Localized errors - errors that are thrown by the library are now conforming to LocalizedError
+- Bumped version of the fingerprint library
 
 ## 1.1.0 (Oct 19, 2021)
-
-- Fixed URL resource ID
-
-## 1.0.1 (Oct 12, 2021)
-
-- ActivationSpawnData is now Parcelable
-- Fixed app availability
-- More robust API URL handling (via networking-android library update)
-- Upgraded to device-fingerprint `1.1.0`
-
-## 1.0.0 (Oct 12, 2021)
 
 Initial release.

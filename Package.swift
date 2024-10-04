@@ -11,8 +11,8 @@ let package = Package(
         .library(name: "WultraActivationSpawnBasic", targets: ["WultraActivationSpawnBasicWrapper"])
     ],
     dependencies: [
-        .package(url: "https://github.com/wultra/networking-apple.git", .upToNextMinor(from: "1.4.0")),
-        .package(url: "https://github.com/wultra/powerauth-mobile-sdk-spm.git", .upToNextMinor(from: "1.8.0")),
+        .package(url: "https://github.com/wultra/networking-apple.git", .upToNextMinor(from: "1.5.0")),
+        .package(url: "https://github.com/wultra/powerauth-mobile-sdk-spm.git", .upToNextMinor(from: "1.9.0")),
         .package(url: "https://github.com/wultra/device-fingerprint-apple-release.git", .upToNextMinor(from: "1.4.0"))
     ],
     targets: [
@@ -37,13 +37,13 @@ let package = Package(
         ),
         .binaryTarget(
             name: "WultraActivationSpawnBinary",
-            url: "https://wultra.jfrog.io/artifactory/activation-spawn-apple-release/WultraActivationSpawn-3.1.0.xcframework.zip",
-            checksum: "ea16873779e5f01756f24b35b62b426cdcbe88b3bc8707ed3463bb6cb74ac46d"
+            url: "https://wultra.jfrog.io/artifactory/activation-spawn-apple-release/WultraActivationSpawn-3.2.0.xcframework.zip",
+            checksum: "cacdd6c2118251282e99d2a43dc8f0977b5a41e2c5936db1a4f1c482bcc96f7a"
         ),
         .binaryTarget(
             name: "WultraActivationSpawnBasicBinary",
-            url: "https://wultra.jfrog.io/artifactory/activation-spawn-apple-release/WultraActivationSpawnBasic-3.1.0.xcframework.zip",
-            checksum: "b19c6f70720aabaa72de9393d92ef664066489c20292fdd3cf80ebac85f24876"
+            url: "https://wultra.jfrog.io/artifactory/activation-spawn-apple-release/WultraActivationSpawnBasic-3.2.0.xcframework.zip",
+            checksum: "720f2206ced9f76a8985ab90df0dcf75a16939f232c42cc19ba601c6f148a86d"
         )
     ]
 )

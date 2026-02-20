@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.2.1 (February, 2026)
+
+- Using the latest Xcode (26.2) to build artifacts
+
 ## 3.2.0 (October, 2024)
 
 - PowerAuth "server stack" `1.9+` is now required

@@ -14,7 +14,7 @@ To understand why is PowerAuth optional if you need it, follow the ["Do I Need P
 
 The library is supported by the following operating systems:
 
-- **iOS** 12.0+
+- **iOS** 13.0+
 
 ## Swift Package Manager
 
